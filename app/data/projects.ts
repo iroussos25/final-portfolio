@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description: "Add a short summary of the project goals and outcomes.",
     detailedDescription: "This project is a Netflix clone built with React. It allows users to browse and watch movies and TV shows, similar to the Netflix platform. The design focuses on providing a familiar and intuitive user experience, with a clean interface and smooth navigation. It also features a  working login component that runs on Firestore.",
     tags: ["Streaming", "Clone", "UI"],
-    url: "https://netflixclone-mrtd.vercel.app/",
+    url: "https://netflix-clone-one-sigma-50.vercel.app/login/",
     image: "/netflix-clone.png",
   },
   {
