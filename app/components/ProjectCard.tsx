@@ -14,37 +14,38 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <article
-      className={`reveal relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-[#f28c28]/60 hover:shadow-[0_18px_60px_-40px_rgba(242,140,40,0.7)] ${delayClass}`}
+      className={`reveal relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-[#f28c28]/60 hover:shadow-[0_18px_60px_-40px_rgba(242,140,40,0.7)] flex flex-col ${delayClass}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      style={{
+        backgroundImage: `linear-gradient(rgba(6, 11, 26, 0.4), rgba(6, 11, 26, 0.65)), url(${project.image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '320px',
+      }}
     >
-      {/* Content */}
-      <div className="mb-4 h-1 w-16 rounded-full bg-linear-to-r from-[#f28c28] via-[#ffb457] to-[#2f5f9e]" />
-      <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-      <p className="mt-3 text-white/70">{project.description}</p>
-      <div className="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.2em] text-white/50">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full border border-[#2f5f9e]/70 bg-[#0d1b33]/70 px-3 py-1 text-[#c6d9f5]"
-          >
-            {tag}
-          </span>
-        ))}
+      {/* Title Bar */}
+      <div className="relative z-10 bg-linear-to-r from-[#f28c28] to-[#ffb457] border-b border-[#ffb457] px-6 py-4">
+        <h3 className="text-xl font-semibold text-black">{project.title}</h3>
       </div>
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noreferrer"
-        className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/70 transition hover:text-white"
-      >
-        Live Preview
-        <span aria-hidden="true">→</span>
-      </a>
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col flex-1 p-6">
+        <div className="mt-auto flex flex-wrap gap-2 text-xs uppercase tracking-[0.2em] text-white/50">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-[#2f5f9e]/70 bg-[#0d1b33]/70 px-3 py-1 text-[#c6d9f5]"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
 
       {/* Hover Overlay */}
       <div
-        className={`project-overlay absolute inset-0 flex flex-col items-start justify-end p-6 transition-transform duration-500 ease-out ${
+        className={`project-overlay absolute inset-0 z-20 flex flex-col items-start justify-end p-6 transition-transform duration-500 ease-out ${
           isHovered ? "translate-y-0" : "translate-y-full"
         }`}
       >
@@ -56,7 +57,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           <a
             href={project.url}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-[#f28c28] px-4 py-2 text-xs font-semibold text-black transition hover:bg-[#ffb457]"
           >
             Visit Project

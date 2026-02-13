@@ -1,24 +1,21 @@
 "use client";
 
-import { useState } from "react";
 import ProjectCard from "./components/ProjectCard";
 import TechStack from "./components/TechStack";
-import ContactModal from "./components/ContactModal";
 import { projects } from "./data/projects";
+import { useContactModal } from "./context/ContactModalContext";
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const { openModal } = useContactModal();
   return (
-    <>
-      <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-20 px-6 py-16">
+    <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-20 px-6 py-16">
         <section className="grid gap-10 md:grid-cols-[1.3fr_0.7fr] md:items-center">
           <div className="space-y-6 reveal">
             <p className="text-xs uppercase tracking-[0.4em] text-white/60">
               Digital designer + front-end developer
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl">
-              Yiannis Roussos
+              Giannis Roussos
             </h1>
             <p className="max-w-xl text-lg text-white/70">
               Front-end developer and digital designer crafting bold, human
@@ -32,7 +29,7 @@ export default function Home() {
                 View Projects
               </a>
               <button
-                onClick={() => setIsModalOpen(true)}
+                onClick={openModal}
                 className="rounded-full border border-[#3b63a3] px-6 py-3 text-sm font-semibold text-white transition hover:border-[#6f9ad6]"
               >
                 Contact Me
@@ -74,10 +71,24 @@ export default function Home() {
               Capabilities
             </p>
             <ul className="mt-4 grid gap-3 text-sm">
-              <li>Product vision and UX strategy</li>
-              <li>Design systems and component libraries</li>
-              <li>Next.js, TypeScript, and WebGL prototypes</li>
-              <li>Story-driven marketing sites</li>
+              <li className="text-[#ffb457]">⚡ Full-Stack Development</li>
+              <li>Next.js, React, TypeScript & modern web frameworks</li>
+              <li>Three.js, WebGL & interactive experiences</li>
+              <li>Design systems & component libraries</li>
+              
+              <li className="text-[#ffb457] mt-2">🎯 Product & Strategy</li>
+              <li>Product vision, roadmapping & UX strategy</li>
+              <li>Go-to-market planning & execution</li>
+              <li>Stakeholder management & cross-functional leadership</li>
+              
+              <li className="text-[#ffb457] mt-2">📈 Sales & Marketing</li>
+              <li>Digital marketing campaigns & conversion optimization</li>
+              <li>Sales strategy, pipeline management & client relations</li>
+              <li>Brand development & story-driven content</li>
+              
+              <li className="text-[#ffb457] mt-2">🏥 Healthcare Expertise</li>
+              <li>Clinical workflow optimization & compliance</li>
+              <li>Healthcare tech solutions & patient-centered design</li>
             </ul>
           </div>
         </section>
@@ -98,7 +109,5 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-    </>
   );
 }

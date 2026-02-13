@@ -10,7 +10,7 @@ import {
   SiNextdotjs,
   SiRedux,
   SiThreedotjs,
-  SiVite,
+  SiFirebase,
 } from "react-icons/si";
 
 const technologies = [
@@ -23,7 +23,7 @@ const technologies = [
   { name: "Next.js", icon: SiNextdotjs, color: "#f28c28" },
   { name: "Redux", icon: SiRedux, color: "#764ABC" },
   { name: "Three.js", icon: SiThreedotjs, color: "#f28c28" },
-  { name: "Vite", icon: SiVite, color: "#646CFF" },
+  { name: "Firestore", icon: SiFirebase, color: "#FFCA28" },
 ];
 
 export default function TechStack() {
