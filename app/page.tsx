@@ -1,65 +1,104 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
+import ProjectCard from "./components/ProjectCard";
+import TechStack from "./components/TechStack";
+import ContactModal from "./components/ContactModal";
+import { projects } from "./data/projects";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-20 px-6 py-16">
+        <section className="grid gap-10 md:grid-cols-[1.3fr_0.7fr] md:items-center">
+          <div className="space-y-6 reveal">
+            <p className="text-xs uppercase tracking-[0.4em] text-white/60">
+              Digital designer + front-end developer
+            </p>
+            <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl">
+              Yiannis Roussos
+            </h1>
+            <p className="max-w-xl text-lg text-white/70">
+              Front-end developer and digital designer crafting bold, human
+              experiences for modern teams.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                className="rounded-full bg-[#f28c28] px-6 py-3 text-sm font-semibold text-black transition hover:-translate-y-0.5 hover:bg-[#ffb457]"
+              >
+                View Projects
+              </a>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="rounded-full border border-[#3b63a3] px-6 py-3 text-sm font-semibold text-white transition hover:border-[#6f9ad6]"
+              >
+                Contact Me
+              </button>
+            </div>
+          </div>
+          <div className="space-y-6 reveal delay-1">
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+              <p className="text-xs uppercase tracking-[0.3em] text-white/50">Now</p>
+              <h2 className="mt-3 text-2xl font-semibold text-white">
+                Available for Spring 2026 work
+              </h2>
+              <p className="mt-3 text-white/70">
+                Select partnerships, 6-12 week engagements, product strategy +
+                full-stack execution.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+              <p className="text-xs uppercase tracking-[0.3em] text-white/50">Recent</p>
+              <p className="mt-3 text-white/70">
+                Led experience design for a fintech relaunch, lifting conversion
+                by 38% and reducing onboarding time.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="grid gap-8 md:grid-cols-2 md:items-start">
+          <div className="space-y-4 reveal">
+            <h2 className="text-2xl font-semibold text-white">Approach</h2>
+            <p className="text-white/70">
+              I blend strategy, design systems, and prototyping to ship work that
+              feels refined and scalable. Expect clear communication, fast
+              iterations, and a focus on momentum.
+            </p>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-white/70 reveal delay-1">
+            <p className="text-sm uppercase tracking-[0.3em] text-white/50">
+              Capabilities
+            </p>
+            <ul className="mt-4 grid gap-3 text-sm">
+              <li>Product vision and UX strategy</li>
+              <li>Design systems and component libraries</li>
+              <li>Next.js, TypeScript, and WebGL prototypes</li>
+              <li>Story-driven marketing sites</li>
+            </ul>
+          </div>
+        </section>
+
+        <TechStack />
+
+        <section id="projects" className="space-y-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className="text-3xl font-semibold text-white">Selected Projects</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-white/50">
+              2023 - 2026
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {projects.map((project, index) => (
+              <ProjectCard key={project.url} project={project} index={index} />
+            ))}
+          </div>
+        </section>
       </main>
-    </div>
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   );
 }
