@@ -70,6 +70,6 @@ export const projects: Project[] = [
     detailedDescription: "This project is a skincare application that helps users track their skincare routines and discover new products. It features a clean and modern design, photo capture functionality, and personalized recommendations. The app is built with Next.js, and includes responsive design, smooth animations, and an easy-to-navigate layout.",
     tags: ["Skincare", "Health", "Next.js"],
     url: "https://skintrinsic-project-mu.vercel.app/",
-    image: "/skintrinsic.png",
+    image: "/Skintrinsic.png",
   },
 ];
