@@ -64,4 +64,12 @@ export const projects: Project[] = [
     url: "https://yiannisportfolio.vercel.app/",
     image: "/oldfolio.png",
   },
+  {
+    title: "Skintrinsic Project",
+    description: "Add a short summary of the project goals and outcomes.",
+    detailedDescription: "This project is a skincare application that helps users track their skincare routines and discover new products. It features a clean and modern design, photo capture functionality, and personalized recommendations. The app is built with Next.js, and includes responsive design, smooth animations, and an easy-to-navigate layout.",
+    tags: ["Skincare", "Health", "Next.js"],
+    url: "https://skintrinsic-project-mu.vercel.app/",
+    image: "/skintrinsic.png",
+  },
 ];
