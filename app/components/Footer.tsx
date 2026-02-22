@@ -35,7 +35,7 @@ export default function Footer() {
             Github
           </a>
           <span className="opacity-30">|</span>
-          <a className="theme-text-bright transition hover:opacity-100" href="www.linkedin.com/in/giannis-roussos-a42a7912" target="_blank" rel="noopener noreferrer">
+          <a className="theme-text-bright transition hover:opacity-100" href="https://www.linkedin.com/in/giannisr" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
           <span className="opacity-30">|</span>
