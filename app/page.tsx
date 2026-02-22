@@ -8,20 +8,20 @@ import { useContactModal } from "./context/ContactModalContext";
 export default function Home() {
   const { openModal } = useContactModal();
   return (
-    <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-20 px-6 py-16">
-        <section className="grid gap-10 md:grid-cols-[1.3fr_0.7fr] md:items-center">
-          <div className="space-y-6 reveal">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/60">
+    <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-14 px-4 py-10 sm:gap-16 sm:px-6 sm:py-14 md:gap-20 md:py-16">
+        <section className="grid gap-8 md:grid-cols-[1.3fr_0.7fr] md:items-center md:gap-10">
+          <div className="reveal flex flex-col items-center space-y-5 text-center md:items-start md:space-y-6 md:text-left">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-white/60 sm:text-xs sm:tracking-[0.4em]">
               Digital designer + front-end developer
             </p>
-            <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl">
+            <h1 className="text-3xl font-semibold leading-tight text-white max-[480px]:text-[2rem] sm:text-5xl md:text-6xl">
               Giannis Roussos
             </h1>
-            <p className="max-w-xl text-lg text-white/70">
+            <p className="max-w-xl text-base text-white/70 sm:text-lg">
               Front-end developer and digital designer crafting bold, human
               experiences for modern teams.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:justify-start">
               <a
                 href="#projects"
                 className="rounded-full bg-[#f28c28] px-6 py-3 text-sm font-semibold text-black transition hover:-translate-y-0.5 hover:bg-[#ffb457]"
@@ -36,8 +36,8 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="space-y-6 reveal delay-1">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div className="reveal delay-1 w-full max-w-xl justify-self-center space-y-5 md:max-w-none md:space-y-6">
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
               <p className="text-xs uppercase tracking-[0.3em] text-white/50">Now</p>
               <h2 className="mt-3 text-2xl font-semibold text-white">
                 Available for Spring 2026 work
@@ -47,7 +47,7 @@ export default function Home() {
                 full-stack execution.
               </p>
             </div>
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
               <p className="text-xs uppercase tracking-[0.3em] text-white/50">Recent</p>
               <p className="mt-3 text-white/70">
                 Led experience design for a fintech relaunch, lifting conversion
@@ -58,7 +58,7 @@ export default function Home() {
         </section>
 
         <section id="about" className="grid gap-8 md:grid-cols-2 md:items-start">
-          <div className="space-y-4 reveal">
+          <div className="reveal space-y-4 text-center md:text-left">
             <h2 className="text-2xl font-semibold text-white">Approach</h2>
             <p className="text-white/70">
               I blend strategy, design systems, and prototyping to ship work that
@@ -66,7 +66,7 @@ export default function Home() {
               iterations, and a focus on momentum.
             </p>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-white/70 reveal delay-1">
+          <div className="reveal delay-1 rounded-3xl border border-white/10 bg-white/5 p-5 text-white/70 sm:p-6">
             <p className="text-sm uppercase tracking-[0.3em] text-white/50">
               Capabilities
             </p>
@@ -96,7 +96,7 @@ export default function Home() {
         <TechStack />
 
         <section id="projects" className="space-y-8">
-          <div className="flex flex-wrap items-end justify-between gap-4">
+          <div className="flex flex-wrap items-end justify-center gap-4 text-center md:justify-between md:text-left">
             <h2 className="text-3xl font-semibold text-white">Selected Projects</h2>
             <p className="text-sm uppercase tracking-[0.3em] text-white/50">
               2023 - 2026

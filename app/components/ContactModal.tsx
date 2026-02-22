@@ -97,11 +97,11 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 backdrop-blur-sm md:items-center"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-2 backdrop-blur-sm sm:p-3 md:p-4"
       onClick={handleClose}
     >
       <div
-        className="modal-shell relative flex h-dvh max-h-dvh w-full max-w-7xl flex-col overflow-hidden rounded-none shadow-2xl md:h-[90vh] md:max-h-[90vh] md:w-[95vw] md:flex-row md:rounded-3xl"
+        className="modal-shell relative flex h-[calc(100dvh-1rem)] max-h-[calc(100dvh-1rem)] w-full max-w-[min(42rem,100%)] flex-col overflow-hidden rounded-2xl shadow-2xl sm:h-[calc(100dvh-1.5rem)] sm:max-h-[calc(100dvh-1.5rem)] md:h-[90vh] md:max-h-[90vh] md:w-[95vw] md:max-w-7xl md:flex-row md:rounded-3xl"
         onClick={(event) => event.stopPropagation()}
       >
         {/* Left Half - About */}
@@ -185,7 +185,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <HiX className="h-5 w-5 text-white/80" />
           </button>
 
-          <div className="space-y-4">
+          <div className="space-y-4 pt-8 md:pt-0">
             <h3 className="theme-text-bright text-3xl font-semibold">Let&apos;s have a chat!</h3>
             <h4 className="theme-text text-lg">
               I&apos;m currently open to new opportunities and collaborations.
