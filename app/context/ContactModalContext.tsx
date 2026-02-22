@@ -11,11 +11,18 @@ const ContactModalContext = createContext<ContactModalContextType | undefined>(u
 
 export function ContactModalProvider({ children }: { children: ReactNode }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [lastLocation, setLastLocation] = useState("/");
+
+  const openModal = () => {
+    const currentLocation = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+    setLastLocation(currentLocation || "/");
+    setIsModalOpen(true);
+  };
 
   return (
-    <ContactModalContext.Provider value={{ openModal: () => setIsModalOpen(true) }}>
+    <ContactModalContext.Provider value={{ openModal }}>
       {children}
-      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} returnTo={lastLocation} />
     </ContactModalContext.Provider>
   );
 }

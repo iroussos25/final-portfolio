@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { HiX } from "react-icons/hi";
+import { useRouter } from "next/navigation";
 import {
   SiCss3,
   SiHtml5,
@@ -17,9 +18,11 @@ import emailjs from "@emailjs/browser";
 type ContactModalProps = {
   isOpen: boolean;
   onClose: () => void;
+  returnTo: string;
 };
 
-export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
+export default function ContactModal({ isOpen, onClose, returnTo }: ContactModalProps) {
+  const router = useRouter();
   const [formState, setFormState] = useState<"idle" | "loading" | "success">("idle");
   const [isActive, setIsActive] = useState(false);
   const nameInputRef = useRef<HTMLInputElement>(null);
@@ -49,21 +52,36 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const trimmedName = formData.user_name.trim();
+    const trimmedEmail = formData.user_email.trim();
+    const trimmedMessage = formData.user_message.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!trimmedName || !trimmedEmail || !trimmedMessage || !emailPattern.test(trimmedEmail)) {
+      form.reportValidity();
+      return;
+    }
+
     setFormState("loading");
 
     try {
       await emailjs.sendForm(
         'service_grcodes',
         'template_ca6dzam',
-        e.currentTarget,
+        form,
         'LjuZS-A8QUs3HDnbb'
       );
       setFormState("success");
       setTimeout(() => {
         setFormState("idle");
         setFormData({ user_name: "", user_email: "", user_message: "" });
-        handleClose();
-      }, 2000);
+        closeModalWithCallback(() => {
+          if (returnTo) {
+            router.replace(returnTo);
+          }
+        });
+      }, 1400);
     } catch {
       setFormState("idle");
       alert(
@@ -72,9 +90,17 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     }
   };
 
-  const handleClose = () => {
+  const closeModal = () => {
     setIsActive(false);
     setTimeout(onClose, 400);
+  };
+
+  const closeModalWithCallback = (afterClose: () => void) => {
+    setIsActive(false);
+    setTimeout(() => {
+      onClose();
+      afterClose();
+    }, 400);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -98,7 +124,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-2 backdrop-blur-sm sm:p-3 md:p-4"
-      onClick={handleClose}
+      onClick={closeModal}
     >
       <div
         className="modal-shell relative flex h-[calc(100dvh-1rem)] max-h-[calc(100dvh-1rem)] w-full max-w-[min(42rem,100%)] flex-col overflow-hidden rounded-2xl shadow-2xl sm:h-[calc(100dvh-1.5rem)] sm:max-h-[calc(100dvh-1.5rem)] md:h-[90vh] md:max-h-[90vh] md:w-[95vw] md:max-w-7xl md:flex-row md:rounded-3xl"
@@ -178,7 +204,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           }`}
         >
           <button
-            onClick={handleClose}
+            onClick={closeModal}
             className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition hover:border-[#f28c28] hover:bg-white/5 md:right-6 md:top-6"
             aria-label="Close modal"
           >
@@ -206,6 +232,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 onChange={handleChange}
                 onFocus={handleFieldFocus}
                 required
+                minLength={2}
+                pattern=".*\\S.*"
+                title="Please enter your name"
                 className="theme-card w-full rounded-xl border px-4 py-3 transition focus:border-[#f28c28] focus:outline-none"
               />
             </div>
@@ -222,6 +251,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 onChange={handleChange}
                 onFocus={handleFieldFocus}
                 required
+                pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+                title="Please enter a valid email address"
                 className="theme-card w-full rounded-xl border px-4 py-3 transition focus:border-[#f28c28] focus:outline-none"
               />
             </div>
@@ -237,6 +268,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 onChange={handleChange}
                 onFocus={handleFieldFocus}
                 required
+                minLength={5}
+                title="Please enter a message"
                 rows={6}
                 className="theme-card w-full resize-none rounded-xl border px-4 py-3 transition focus:border-[#f28c28] focus:outline-none"
               />
@@ -273,9 +306,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   </svg>
                 </div>
                 <p className="text-xl font-semibold text-white">
-                  Thanks for the message!
-                  <br />
-                  I&apos;ll get back to you soon.
+                  Thanks for the message! I&apos;ll be in touch soon!
                 </p>
               </div>
             </div>
