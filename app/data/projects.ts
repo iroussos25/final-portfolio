@@ -9,12 +9,20 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Ultraverse NFT Marketplace",
+    title: "FHIR Pulse: Clinical Interoperability Dashboard ",
     description: "Add a short summary of the project goals and outcomes.",
-    detailedDescription: "This project is an NFT marketplace built with Next.js. It allows users to browse, buy, and sell NFTs in a sleek and modern interface. The design focuses on providing a seamless user experience, with intuitive navigation and visually appealing graphics. The platform integrates with blockchain APIs to facilitate transactions and manage NFT ownership.",
-    tags: ["Next.js", "UI", "Frontend"],
-    url: "https://yiannis-internship.vercel.app/",
-    image: "/Ultraverse.png",
+    detailedDescription: "A specialized Proof-of-Concept (PoC) developed to demonstrate real-time clinical interoperability. This high-contrast dashboard prioritizes data integrity and low-latency visualization, successfully mapping nested JSON resources from a live HL7 FHIR R4 server into a functional ICU-style telemetry feed. The dashboard is built with Next.js and Tailwind CSS.",
+    tags: ["Healthcare", "FHIR", "Next.js"],
+    url: "https://fhir-dashboard-five.vercel.app/",
+    image: "/icu-monitor.png",
+  },
+  {
+    title: "Skintrinsic Project",
+    description: "Add a short summary of the project goals and outcomes.",
+    detailedDescription: "This project is a skincare application that helps users track their skincare routines and discover new products. It features a clean and modern design, photo capture functionality, and personalized recommendations. The app is built with Next.js, and includes responsive design, smooth animations, and an easy-to-navigate layout.",
+    tags: ["Skincare", "Health", "Next.js"],
+    url: "https://skintrinsic-project-mu.vercel.app/",
+    image: "/Skintrinsic.png",
   },
   {
     title: "Summarist Audio Book Platform",
@@ -33,20 +41,12 @@ export const projects: Project[] = [
     image: "/teestore.png",
   },
   {
-    title: "Netflix Clone",
+    title: "Ultraverse NFT Marketplace",
     description: "Add a short summary of the project goals and outcomes.",
-    detailedDescription: "This project is a Netflix clone built with React. It allows users to browse and watch movies and TV shows, similar to the Netflix platform. The design focuses on providing a familiar and intuitive user experience, with a clean interface and smooth navigation. It also features a  working login component that runs on Firestore.",
-    tags: ["Streaming", "Clone", "UI"],
-    url: "https://netflix-clone-one-sigma-50.vercel.app/",
-    image: "/netflix-clone.png",
-  },
-  {
-    title: "Skintrinsic Project",
-    description: "Add a short summary of the project goals and outcomes.",
-    detailedDescription: "This project is a skincare application that helps users track their skincare routines and discover new products. It features a clean and modern design, photo capture functionality, and personalized recommendations. The app is built with Next.js, and includes responsive design, smooth animations, and an easy-to-navigate layout.",
-    tags: ["Skincare", "Health", "Next.js"],
-    url: "https://skintrinsic-project-mu.vercel.app/",
-    image: "/Skintrinsic.png",
+    detailedDescription: "This project is an NFT marketplace built with Next.js. It allows users to browse, buy, and sell NFTs in a sleek and modern interface. The design focuses on providing a seamless user experience, with intuitive navigation and visually appealing graphics. The platform integrates with blockchain APIs to facilitate transactions and manage NFT ownership.",
+    tags: ["Next.js", "UI", "Frontend"],
+    url: "https://yiannis-internship.vercel.app/",
+    image: "/Ultraverse.png",
   },
   {
     title: "Hotel Booking Platform",
@@ -55,6 +55,14 @@ export const projects: Project[] = [
     tags: ["Booking", "SaaS", "TypeScript"],
     url: "https://hotel-booking-project-28lm.vercel.app/",
     image: "/quickstay.png",
+  },
+  {
+    title: "Netflix Clone",
+    description: "Add a short summary of the project goals and outcomes.",
+    detailedDescription: "This project is a Netflix clone built with React. It allows users to browse and watch movies and TV shows, similar to the Netflix platform. The design focuses on providing a familiar and intuitive user experience, with a clean interface and smooth navigation. It also features a  working login component that runs on Firestore.",
+    tags: ["Streaming", "Clone", "UI"],
+    url: "https://netflix-clone-one-sigma-50.vercel.app/",
+    image: "/netflix-clone.png",
   },
   {
     title: "Blinkin Movie Database",
