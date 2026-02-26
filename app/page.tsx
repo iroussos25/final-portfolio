@@ -12,13 +12,13 @@ export default function Home() {
         <section className="grid gap-8 md:grid-cols-[1.3fr_0.7fr] md:items-center md:gap-10">
           <div className="reveal flex flex-col items-center space-y-5 text-center md:items-start md:space-y-6 md:text-left">
             <p className="text-[10px] uppercase tracking-[0.3em] text-white/60 sm:text-xs sm:tracking-[0.4em]">
-              Digital designer + front-end developer
+              Full-Stack Software Engineer + Digital Designer
             </p>
             <h1 className="text-3xl font-semibold leading-tight text-white max-[480px]:text-[2rem] sm:text-5xl md:text-6xl">
               Giannis Roussos
             </h1>
             <p className="max-w-xl text-base text-white/70 sm:text-lg">
-              Front-end developer and digital designer crafting bold, human
+              Full-Stack Software Engineer and digital designer crafting bold, human
               experiences for modern teams.
             </p>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:justify-start">
@@ -43,15 +43,14 @@ export default function Home() {
                 Available for Spring 2026 work
               </h2>
               <p className="mt-3 text-white/70">
-                Select partnerships, 6-12 week engagements, product strategy +
-                full-stack execution.
+                Full-time Employment, select partnerships, product strategy +
+                full-stack execution, global B2B Engagements & Technical Partnerships.
               </p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
               <p className="text-xs uppercase tracking-[0.3em] text-white/50">Recent</p>
               <p className="mt-3 text-white/70">
-                Led experience design for a fintech relaunch, lifting conversion
-                by 38% and reducing onboarding time.
+                Optimized a Next.js audio-subscription platform, achieving a 38% improvement in lighthouse performance scores and reducing initial &ldquo;Time-to-Content&rdquo; by implementing advanced SSR and asset-loading strategies.
               </p>
             </div>
           </div>
@@ -61,9 +60,7 @@ export default function Home() {
           <div className="reveal space-y-4 text-center md:text-left">
             <h2 className="text-2xl font-semibold text-white">Approach</h2>
             <p className="text-white/70">
-              I blend strategy, design systems, and prototyping to ship work that
-              feels refined and scalable. Expect clear communication, fast
-              iterations, and a focus on momentum.
+             I approach software as a unified system of code and human workflow. My background in high-stakes clinical operations and sales leadership allows me to architect full-stack solutions that are technically robust and deeply intuitive. From designing Next.js interfaces to integrating complex APIs, I prioritize scalability, clear communication, and a focus on high-impact momentum.
             </p>
           </div>
           <div className="reveal delay-1 rounded-3xl border border-white/10 bg-white/5 p-5 text-white/70 sm:p-6">
@@ -72,7 +69,7 @@ export default function Home() {
             </p>
             <ul className="mt-4 grid gap-3 text-sm">
               <li className="text-[#ffb457]">⚡ Full-Stack Development</li>
-              <li>Next.js, React, TypeScript & modern web frameworks</li>
+              <li>Next.js, React, TypeScript, Python, SQL & modern web frameworks</li>
               <li>Three.js, WebGL & interactive experiences</li>
               <li>Design systems & component libraries</li>
               
@@ -88,7 +85,8 @@ export default function Home() {
               
               <li className="text-[#ffb457] mt-2">🏥 Healthcare Expertise</li>
               <li>Clinical workflow optimization & compliance</li>
-              <li>Healthcare tech solutions & patient-centered design</li>
+              <li>Healthcare Interoperability, FHIR/HL7, & Clinical Workflow Automation</li>
+              <li>ICU and ER Registered Nurse with a decade of experience</li>
             </ul>
           </div>
         </section>

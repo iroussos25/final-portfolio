@@ -140,14 +140,14 @@ export default function ContactModal({ isOpen, onClose, returnTo }: ContactModal
             <h3 className="theme-text-bright text-3xl font-semibold">
               Here&apos;s a bit <span className="text-[#f28c28]">about me</span>
             </h3>
-            <h4 className="theme-text text-lg font-medium">Frontend Software Engineer</h4>
+            <h4 className="theme-text text-lg font-medium">Full-Stack Software Engineer</h4>
             <div className="theme-text space-y-4 text-sm leading-relaxed">
               <p>
-                I&apos;m a <span className="font-semibold text-[#f28c28]">Frontend Software Engineer</span> with
-                a passion for building web applications with amazing user experiences.
+                I&apos;m a <span className="font-semibold text-[#f28c28]">Full-Stack Software Engineer</span> with
+                a passion for building useful tools that bridge the gap between Humans and Technology.
               </p>
               <p>
-                I have experience in sales, management and healthcare. I have a{" "}
+                I have experience in Healtchcare (RN), Sales and Management. I have a{" "}
                 <span className="font-semibold text-[#f28c28]">passion for learning new skills and technologies</span>,
                 and I&apos;m always looking to improve my craft.
               </p>

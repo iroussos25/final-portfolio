@@ -28,18 +28,18 @@ export default function AboutPage() {
 
           <div className="space-y-4 text-white/70">
             <p>
-              I&apos;m a <span className="font-semibold text-[#f28c28]">Frontend Software Engineer</span> with
-              a passion for building web applications with amazing user experiences.
+              I&apos;m a <span className="font-semibold text-[#f28c28]">Full-Stack Software Engineer</span> with
+              a passion for building useful tools that bridge the gap between Humans and Technology.
             </p>
             <p>
-              I have experience in sales, management and healthcare. I have a{" "}
+              I have experience in Healtchcare (RN), Sales and Management. I have a{" "}
               <span className="font-semibold text-[#f28c28]">passion for learning new skills and technologies</span>,
               and I&apos;m always looking to improve my craft.
             </p>
             <p>
               I love to{" "}
               <span className="font-semibold text-[#f28c28]">
-                create clean, efficient, and user-friendly interfaces
+                create clean, efficient, and user-friendly integrations
               </span>{" "}
               that make people&apos;s lives easier.
             </p>
@@ -52,9 +52,9 @@ export default function AboutPage() {
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
             <h2 className="text-xl font-semibold text-white">Experience</h2>
             <ul className="mt-4 space-y-3 text-white/70">
-              <li>Frontend Software Engineer</li>
-              <li>Sales & Management Background</li>
-              <li>Healthcare Industry Experience</li>
+              <li>Software Engineer</li>
+              <li>Healthcare Industry Background</li>
+              <li>Sales & Management Experience</li>
             </ul>
           </div>
 

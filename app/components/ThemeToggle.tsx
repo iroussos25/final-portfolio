@@ -1,16 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { HiMoon, HiSun } from "react-icons/hi";
 
+const subscribe = () => () => {};
+
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(subscribe, () => true, () => false);
 
   if (!mounted) {
     return (
