@@ -17,12 +17,12 @@ export const projects: Project[] = [
     image: "/icu-monitor.png",
   },
   {
-    title: "Skintrinsic Project",
+    title: "Skinstric Project",
     description: "Add a short summary of the project goals and outcomes.",
     detailedDescription: "This project is a skincare application that helps users track their skincare routines and discover new products. It features a clean and modern design, photo capture functionality, and personalized recommendations. The app is built with Next.js, and includes responsive design, smooth animations, and an easy-to-navigate layout.",
     tags: ["Skincare", "Health", "Next.js"],
-    url: "https://skintrinsic-project-mu.vercel.app/",
-    image: "/Skintrinsic.png",
+    url: "https://skinstric-project-mu.vercel.app/",
+    image: "/Skinstric.png",
   },
   {
     title: "Summarist Audio Book Platform",
