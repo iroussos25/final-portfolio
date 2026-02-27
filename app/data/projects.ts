@@ -9,9 +9,9 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "FHIR Pulse: Clinical Interoperability Dashboard ",
+    title: "FHIR Pulse: Clinical Interoperability Dashboard PoC",
     description: "Add a short summary of the project goals and outcomes.",
-    detailedDescription: "A specialized Proof-of-Concept (PoC) developed to demonstrate real-time clinical interoperability. This high-contrast dashboard prioritizes data integrity and low-latency visualization, successfully mapping nested JSON resources from a live HL7 FHIR R4 server into a functional ICU-style telemetry feed. The dashboard is built with Next.js and Tailwind CSS.",
+    detailedDescription: "A Next.js & AWS-powered dashboard designed for real-time patient monitoring. Solved complex interoperability challenges by architecting a secure middleware to aggregate and visualize HL7 FHIR data. Features low-latency SVG vitals tracking and a specialized UI optimized for high-stakes clinical environments.",
     tags: ["Healthcare", "FHIR", "Next.js"],
     url: "https://fhir-dashboard-five.vercel.app/",
     image: "/icu-monitor.png",

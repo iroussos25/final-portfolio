@@ -39,7 +39,7 @@ export default function Footer() {
             LinkedIn
           </a>
           <span className="opacity-30">|</span>
-          <a className="theme-text-bright transition hover:opacity-100" href="/tech-resume5.pdf" target="_blank" rel="noopener noreferrer">
+          <a className="theme-text-bright transition hover:opacity-100" href="/tech-resume6.pdf" target="_blank" rel="noopener noreferrer">
             Resume
           </a>
         </div>
