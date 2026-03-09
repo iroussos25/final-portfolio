@@ -29,41 +29,35 @@ export default function AboutPage() {
           <div className="space-y-4 text-white/70">
             <p>
               I&apos;m a <span className="font-semibold text-[#f28c28]">Full-Stack Software Engineer</span> with
-              a passion for building useful tools that bridge the gap between Humans and Technology.
+              a passion for building useful tools that bridge the gap between Humans and Technology. I enjoy untangling complex problems—whether they’re in a clinical data pipeline or a messy codebase.
             </p>
             <p>
-              I have experience in Healtchcare (RN), Sales and Management. I have a{" "}
-              <span className="font-semibold text-[#f28c28]">passion for learning new skills and technologies</span>,
-              and I&apos;m always looking to improve my craft.
+              My background is a bit unconventional: I spent years in <span className="font-semibold text-[#f28c28]">ICU Nursing</span> and the <span className="font-semibold text-[#f28c28]">Special Forces.</span> That experience taught me how to stay objective when things get chaotic and how to build systems that people can actually rely on when it matters most.
+               </p>
+            <p>
+              These days, I’m focused on <span className="font-semibold text-[#f28c28]">AI Orchestration and HealthTech interoperability.</span>  I like building tools that feel &apos;invisible&apos;—software that just works so humans can focus on the task at hand.
             </p>
             <p>
-              I love to{" "}
-              <span className="font-semibold text-[#f28c28]">
-                create clean, efficient, and user-friendly integrations
-              </span>{" "}
-              that make people&apos;s lives easier.
-            </p>
-            <p>
-              When I&apos;m not coding, you can find me exploring new technologies, reading tech blogs, or playing
-              video games. I also love the great outdoors and playing guitar. Poorly. 
+              When I&apos;m away from my desk, I&apos;m usually outdoors or attempting to play the guitar. I&apos;ve reached a &apos;production-grade&apos; level in TypeScript, but my acoustic skills are still very much <span className="font-semibold text-[#f28c28]">in beta.</span>  (Expect missed chords and high enthusiasm.)
             </p>
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h2 className="text-xl font-semibold text-white">Experience</h2>
+            <h2 className="text-xl font-semibold text-white">Background & Foundation</h2>
             <ul className="mt-4 space-y-3 text-white/70">
-              <li>Software Engineer</li>
-              <li>Healthcare Industry Background</li>
-              <li>Sales & Management Experience</li>
+              <li><span className="font-semibold text-[#f28c28]">Clinical: </span>Registered Nurse (Multi-state) | HL7 FHIR & HIPAA Standards</li>
+              <li><span className="font-semibold text-[#f28c28]">Operational: </span>Special Forces Leadership | High-Pressure Systems & Logic</li>
+              <li><span className="font-semibold text-[#f28c28]">Strategic: </span>Project Lifecycle Management | Technical Sales Integration</li>
             </ul>
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h2 className="text-xl font-semibold text-white">Education & Skills</h2>
-            <p className="mt-4 text-white/70">
-              Continuously learning and building with modern web technologies including React, Next.js, TypeScript,
-              and more. Focused on creating exceptional user experiences through clean code and thoughtful design.
-            </p>
+            <h2 className="text-xl font-semibold text-white">Core Toolkit</h2>
+             <ul className="mt-4 space-y-3 text-white/70">
+              <li><span className="font-semibold text-[#f28c28]">The Stack: </span>React, Next.js, TypeScript, Node.js, PostgreSQL.</li>
+              <li><span className="font-semibold text-[#f28c28]">Specializations: </span>AI Agent Orchestration (LangGraph), MediaPipe, HL7 FHIR R4.</li>
+              <li><span className="font-semibold text-[#f28c28]">Infrastructure: </span>AWS (EC2/S3), CI/CD, HIPAA-compliant architecture.</li>
+            </ul>
           </div>
         </div>
       </section>

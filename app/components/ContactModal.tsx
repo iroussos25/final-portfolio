@@ -159,8 +159,7 @@ export default function ContactModal({ isOpen, onClose, returnTo }: ContactModal
                 that make people&apos;s lives easier.
               </p>
               <p>
-                When I&apos;m not coding, you can find me exploring new technologies, reading tech blogs, or playing
-                video games.
+                When I&apos;m not coding, you can find me exploring new technologies, reading tech blogs, or exploring nature.
               </p>
             </div>
           </div>

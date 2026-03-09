@@ -11,7 +11,7 @@ export default function Header() {
     <header className="theme-header sticky top-0 z-10 border-b backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-5">
         <Link href="/" className="theme-text-bright flex min-w-0 items-center gap-2 text-base font-semibold tracking-[0.12em] sm:gap-3 sm:text-lg sm:tracking-[0.2em]">
-          <span className="logo-wrap shrink-0">
+          <span className="logo-wrap shrink-0 transition-all duration-300 hover:brightness-110 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(242,140,40,0.9),0_0_60px_rgba(242,140,40,0.6),0_0_80px_rgba(242,140,40,0.3)]">
             <Image
               src="/transparent-logo.svg"
               alt="Giannis Roussos logo"
