@@ -33,6 +33,14 @@ export const projects: Project[] = [
     image: "/summarist.png",
   },
   {
+    title: "Enterprise API Governance & Security Sentinel",
+    description: "",
+    detailedDescription: "Engineered a Python-based static analysis engine to enforce OpenAPI 3.0 security and compliance. Integrated with GitHub Actions to create an automated CI/CD \"gatekeeper\" that blocks insecure protocols (http) and ensures 100% auditability for enterprise API specifications. Transformed manual governance into a \"fail-fast\" automated pipeline.",
+    tags: ["Python", "OpenAPI", "GitHub Actions", "CI/CD"],
+    url: "https://github.com/iroussos25/prudential-linter",
+    image: "/prudential_linter.png",
+  },
+  {
     title: "Interactive 3D Engine",
     description: "",
     detailedDescription: "A high-performance 3D visualization engine built with Three.js and WebGL. I optimized custom shaders to maintain a fluid 60fps on mobile devices and architected a modular AI-integration interface designed for generative asset creation. This project demonstrates the ability to bridge immersive 3D environments with extensible API layers, focusing on performance-first digital twin rendering.",
