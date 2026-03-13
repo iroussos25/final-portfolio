@@ -9,6 +9,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "AI Clinical Context Agent",
+    description: "", 
+    detailedDescription: "High-Availability Clinical Intelligence & LLMOps Platform. A production-ready agent designed for acute care settings. Features a resilient multi-model fallback \"waterfall,\" real-time FHIR R4 integration, and a custom benchmarking suite. Built by an ICU Nurse to solve clinical explainability and system uptime challenges.",
+    tags: ["Next.js", "LLMOps", "RAG", "FHIR", "Gemini 2.0", "Supabase", "Healthcare"],
+    url: "https://ai-clinical-context-agent.vercel.app/",
+    image: "/clinical_doc_analyst.png",
+  },
+  {
     title: "FHIR Pulse: Clinical Interoperability",
     description: "", 
     detailedDescription: "A production-grade interoperability dashboard architected to aggregate HL7 FHIR R4 data streams via secure Node.js middleware. I engineered a low-latency visualization layer for real-time vitals tracking, implementing custom schema validation and HIPAA-compliant data handling for high-stakes clinical environments.",
@@ -80,12 +88,12 @@ export const projects: Project[] = [
     url: "https://blinkin-react.vercel.app/",
     image: "/blinkin.png",
   },
-  {
-    title: "Performance Research (Legacy Portfolio)",
-    description: "",
-    detailedDescription: "My initial project in the engineering space, focusing on the fundamentals of the Next.js framework. This served as a research platform for mastering responsive grid layouts and the performance implications of client-side animations.",
-    tags: ["Next.js", "UX/UI", "Performance"],
-    url: "https://yiannisportfolio.vercel.app/",
-    image: "/oldfolio.png",
-  },
+  // {
+  //   title: "Performance Research (Legacy Portfolio)",
+  //   description: "",
+  //   detailedDescription: "My initial project in the engineering space, focusing on the fundamentals of the Next.js framework. This served as a research platform for mastering responsive grid layouts and the performance implications of client-side animations.",
+  //   tags: ["Next.js", "UX/UI", "Performance"],
+  //   url: "https://yiannisportfolio.vercel.app/",
+  //   image: "/oldfolio.png",
+  // },
 ];

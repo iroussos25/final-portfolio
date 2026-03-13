@@ -42,13 +42,13 @@ export default function Home() {
                 Engineering Mission-Critical Systems
               </h2>
               <p className="mt-3 text-white/70">
-                Currently based in North Carolina (US Citizen) and engineering AI-driven biometric interfaces and FHIR-compliant data systems. I am currently available for Full-Time Engineering roles or strategic technical partnerships. I can collaborate either as a W2 or 1099 contractor through my US-Based LLC!
+                Currently based in North Carolina (US Citizen) and engineering AI-driven clinical interfaces and FHIR-compliant data systems. I specialize in **LLMOps and High-Availability AI Orchestration**, focusing on bringing &apos;zero-fail&apos; reliability to the HealthTech sector.
               </p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
               <p className="text-xs uppercase tracking-[0.3em] text-white/50">Recent</p>
               <p className="mt-3 text-white/70">
-                Engineered a high-performance Next.js audio-delivery architecture, achieving a 38% increase in Lighthouse performance scores. By implementing advanced Server-Side Rendering (SSR) and custom asset-loading strategies, I reduced initial &apos;Time-to-Content&apos; by 1.2s, ensuring sub-second latency for enterprise-scale content distribution.
+                Engineered a high-availability AI Clinical Context Agent featuring a multi-model &apos;waterfall&apos; architecture (Gemini/Gemma). Achieved 100% uptime across 429/503 API error states by automating failover, maintaining sub-2-second latency for acute care synthesis. Integrated RAG via Supabase pgvector and live FHIR R4 data ingestion for production-grade decision support.
               </p>
             </div>
           </div>
@@ -66,12 +66,15 @@ export default function Home() {
               Capabilities
             </p>
             <ul className="mt-4 grid gap-3 text-base leading-relaxed sm:text-lg">
-              <li className="text-[#ffb457]">⚡ Full-Stack Development</li>
-              <li>Next.js, React, TypeScript, Python, SQL & modern web frameworks</li>
+              <li className="text-[#ffb457]">⚡ Full-Stack & AI Engineering</li>
+              <li>Next.js 15, TypeScript, Python, SQL </li>
+              <li><span className="font-semibold text-[#f28c28]">LLMOps: </span> Multi-model orchestration & automated fallback systems</li>
+              <li><span className="font-semibold text-[#f28c28]">RAG: </span> Vector database architecture (Supabase pgvector) and semantic search</li>
               <li>Three.js, WebGL & interactive experiences</li>
               <li>Design systems & component libraries</li>
               
               <li className="text-[#ffb457] mt-2">🎯 System Architecture and Implementation</li>
+              <li><span className="font-semibold text-[#f28c28]">Resilient Infrastructure: </span> 429/503 error handling & graceful degradation</li>
               <li>Product vision, roadmapping & UX strategy</li>
               <li>Go-to-market planning & execution</li>
               <li>Stakeholder management & cross-functional leadership</li>
@@ -83,7 +86,7 @@ export default function Home() {
               
               <li className="text-[#ffb457] mt-2">🏥 Healthcare Expertise</li>
               <li>Clinical workflow optimization & compliance</li>
-              <li>Healthcare Interoperability, FHIR/HL7, & Clinical Workflow Automation</li>
+              <li><span className="font-semibold text-[#f28c28]">Healthcare Interoperability: </span> FHIR R4 / HL7 integration and clinical data synthesis</li>
               <li>ICU and ER Registered Nurse with a decade of experience</li>
             </ul>
           </div>
