@@ -28,14 +28,14 @@ export default function AboutPage() {
 
           <div className="space-y-4 text-white/70">
             <p>
-              I&apos;m a <span className="font-semibold text-[#f28c28]">Full-Stack Software Engineer</span> with
-              a passion for building useful tools that bridge the gap between Humans and Technology. I enjoy untangling complex problems—whether they’re in a clinical data pipeline or a messy codebase.
+              I went from Code Blue to code base. I&apos;m a <span className="font-semibold text-[#f28c28]">Full-Stack Software Engineer</span> who
+              likes building tools that actually help people get things done — and I like untangling complex problems, whether that&apos;s a clinical data pipeline or a messy repo.
             </p>
             <p>
               My background is a bit unconventional: I spent years in <span className="font-semibold text-[#f28c28]">ICU Nursing</span> and the <span className="font-semibold text-[#f28c28]">Special Forces.</span> That experience taught me how to stay objective when things get chaotic and how to build systems that people can actually rely on when it matters most.
                </p>
             <p>
-              These days, I&apos;m focused on <span className="font-semibold text-[#f28c28]">AI Orchestration and HealthTech interoperability.</span>  I build across frameworks and paradigms—recently re-architecting a full production Next.js clinical AI agent into Ruby on Rails in a single weekend. I like building tools that feel &apos;invisible&apos;—software that just works so humans can focus on the task at hand.
+              These days, I&apos;m focused on <span className="font-semibold text-[#f28c28]">AI Orchestration and HealthTech interoperability.</span>  I work across frameworks — recently re-architecting a production Next.js clinical AI agent into Ruby on Rails over a weekend. I like building software that feels invisible — the kind nobody notices because it just works.
             </p>
             <p>
               When I&apos;m away from my desk, I&apos;m usually outdoors or attempting to play the guitar. I&apos;ve reached a &apos;production-grade&apos; level in TypeScript, but my acoustic skills are still very much <span className="font-semibold text-[#f28c28]">in beta.</span>  (Expect missed chords and high enthusiasm.)

@@ -11,7 +11,7 @@ export const projects: Project[] = [
   {
     title: "FHIR Pulse: Clinical Interoperability",
     description: "", 
-    detailedDescription: "A production-grade interoperability dashboard architected to aggregate HL7 FHIR R4 data streams via secure Node.js middleware. I engineered a low-latency visualization layer for real-time vitals tracking, implementing custom schema validation and HIPAA-compliant data handling for high-stakes clinical environments.",
+    detailedDescription: "An interoperability dashboard that pulls HL7 FHIR R4 data through a Node.js middleware layer and visualizes patient vitals in real time. Custom schema validation and HIPAA-compliant data handling — built for clinical environments where stale or malformed data isn't an option.",
     tags: ["HL7 FHIR", "Node.js", "AWS", "Healthcare"],
     url: "https://fhir-dashboard-five.vercel.app/",
     image: "/icu-monitor.png",
@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     title: "Skinstric: AI Biometric Interface",
     description: "",
-    detailedDescription: "An AI-driven capture interface using MediaPipe for real-time 3D biometric landmark tracking. I developed a telemetry feedback loop to gate data ingestion based on image fidelity, ensuring medical-grade data quality for downstream AI diagnostic analysis.",
+    detailedDescription: "AI-powered capture interface using MediaPipe for real-time 3D biometric landmark detection. The system checks image quality before accepting data — if the capture isn't clean enough, it gets rejected rather than feeding noise to the downstream model.",
     tags: ["MediaPipe", "Computer Vision", "TypeScript", "AI"],
     url: "https://skinstric-project-mu.vercel.app/",
     image: "/Skinstric.png",
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     title: "Summarist: AI SaaS Architecture",
     description: "",
-    detailedDescription: "A full-stack SaaS platform featuring LLM orchestration for automated content summarization. I engineered a robust architecture integrating Firebase Auth for identity management and a tiered Stripe subscription system, focusing on high-concurrency API handling.",
+    detailedDescription: "Full-stack SaaS platform that uses LLMs to generate content summaries. Built with Firebase Auth, a tiered Stripe subscription system, and an API layer designed to handle concurrent users without falling over.",
     tags: ["AI Orchestration", "Next.js", "Stripe", "PostgreSQL"],
     url: "https://yiannis-summarist.vercel.app/",
     image: "/summarist.png",
@@ -35,7 +35,7 @@ export const projects: Project[] = [
   {
     title: "Enterprise API Governance & Security Sentinel",
     description: "",
-    detailedDescription: "Engineered a Python-based static analysis engine to enforce OpenAPI 3.0 security and compliance. Integrated with GitHub Actions to create an automated CI/CD \"gatekeeper\" that blocks insecure protocols (http) and ensures 100% auditability for enterprise API specifications. Transformed manual governance into a \"fail-fast\" automated pipeline.",
+    detailedDescription: "Python-based static analysis tool that enforces security rules on OpenAPI 3.0 specs. Plugs into GitHub Actions as a CI/CD gate — if your API spec uses insecure protocols or fails compliance checks, the build stops. Replaced a manual review process with something that catches problems before they ship.",
     tags: ["Python", "OpenAPI", "GitHub Actions", "CI/CD"],
     url: "https://github.com/iroussos25/prudential-linter",
     image: "/prudential_linter.png",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
   {
     title: "Interactive 3D Engine",
     description: "",
-    detailedDescription: "A high-performance 3D visualization engine built with Three.js and WebGL. I optimized custom shaders to maintain a fluid 60fps on mobile devices and architected a modular AI-integration interface designed for generative asset creation. This project demonstrates the ability to bridge immersive 3D environments with extensible API layers, focusing on performance-first digital twin rendering.",
+    detailedDescription: "3D visualization built with Three.js and WebGL. Custom shaders tuned to hold 60fps on mobile, with an API layer for generative asset creation — the kind of setup you'd use for interactive product configurators or digital twin rendering.",
     tags: ["Three.js", "WebGL", "API Architecture", "Generative UI"],
     url: "https://3js-swart-theta.vercel.app/",
     image: "/teestore.png",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
   {
     title: "Ultraverse: Asset Marketplace",
     description: "",
-    detailedDescription: "A scalable marketplace architecture built with Next.js and integrated blockchain API endpoints. I focused on state management and ownership verification logic, ensuring a performant and secure interface for high-volume digital asset browsing.",
+    detailedDescription: "Marketplace built with Next.js, connected to blockchain API endpoints for ownership verification. Focus was on getting the state management right so the UI stays snappy even when browsing large asset collections.",
     tags: ["Next.js", "Web3 API", "State Management"],
     url: "https://yiannis-internship.vercel.app/",
     image: "/Ultraverse.png",
@@ -59,7 +59,7 @@ export const projects: Project[] = [
   {
     title: "QuickStay: Booking Logic Engine",
     description: "",
-    detailedDescription: "A full-stack reservation engine emphasizing type-safe architecture and complex state synchronization. Built with React and TypeScript, it features a robust search algorithm and managed mock-API interactions to simulate enterprise booking lifecycles.",
+    detailedDescription: "Full-stack booking system built with React and TypeScript. Search filtering, date-range availability logic, and mock-API integrations that simulate real reservation workflows end-to-end.",
     tags: ["TypeScript", "API Design", "SaaS"],
     url: "https://hotel-booking-project-28lm.vercel.app/",
     image: "/quickstay.png",
@@ -67,7 +67,7 @@ export const projects: Project[] = [
   {
     title: "Firebase Auth & System Architecture (Netflix)",
     description: "",
-    detailedDescription: "A deep dive into secure identity management and real-time database synchronization. I used this project to master Firebase Auth and Firestore, building a subscription-style interface with a focus on protected routing and secure user-session persistence.",
+    detailedDescription: "Built to get hands-on with Firebase Auth and Firestore. Protected routing, persistent user sessions, and real-time database sync — modeled after a streaming subscription platform.",
     tags: ["Firebase Auth", "Firestore", "React"],
     url: "https://netflix-clone-one-sigma-50.vercel.app/",
     image: "/netflix-clone.png",
@@ -75,17 +75,17 @@ export const projects: Project[] = [
   {
     title: "Blinkin: API Integration & SPA Logic",
     description: "",
-    detailedDescription: "An exploration of Single Page Application (SPA) architecture and third-party API consumption. This project focuses on efficient data fetching from the TMDB API, custom search filtering logic, and managing global state for user watchlists in a clean React environment.",
+    detailedDescription: "SPA focused on clean API consumption patterns. Pulls from the TMDB API with efficient data fetching, custom search filters, and global state management for user watchlists.",
     tags: ["React", "API Integration", "State Management"],
     url: "https://blinkin-react.vercel.app/",
     image: "/blinkin.png",
   },
-  // {
-  //   title: "Performance Research (Legacy Portfolio)",
-  //   description: "",
-  //   detailedDescription: "My initial project in the engineering space, focusing on the fundamentals of the Next.js framework. This served as a research platform for mastering responsive grid layouts and the performance implications of client-side animations.",
-  //   tags: ["Next.js", "UX/UI", "Performance"],
-  //   url: "https://yiannisportfolio.vercel.app/",
-  //   image: "/oldfolio.png",
-  // },
+  {
+    title: "Performance Research (Legacy Portfolio)",
+    description: "",
+    detailedDescription: "My initial project in the engineering space, focusing on the fundamentals of the Next.js framework. This served as a research platform for mastering responsive grid layouts and the performance implications of client-side animations.",
+    tags: ["Next.js", "UX/UI", "Performance"],
+    url: "https://yiannisportfolio.vercel.app/",
+    image: "/oldfolio.png",
+  },
 ];

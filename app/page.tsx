@@ -13,13 +13,13 @@ export default function Home() {
         <section className="grid gap-8 md:grid-cols-[1.3fr_0.7fr] md:items-center md:gap-10">
           <div className="reveal flex flex-col items-center space-y-5 text-center md:items-start md:space-y-6 md:text-left">
             <p className="text-[10px] uppercase tracking-[0.3em] text-white/60 sm:text-xs sm:tracking-[0.4em]">
-              Full-Stack Software Engineer specializing in AI Orchestration & HealthTech Interoperability.
+              Full-Stack Software Engineer specializing in AI Orchestration & Complex Systems.
             </p>
             <h1 className="text-3xl font-semibold leading-tight text-white max-[480px]:text-[2rem] sm:text-5xl md:text-6xl">
               Giannis Roussos
             </h1>
             <p className="max-w-xl text-base text-white/70 sm:text-lg">
-              Building resilient, clinical-grade systems with a &apos;zero-fail&apos; mindset forged in the Special Forces and ICU Nursing.
+              I build software the way I trained in Special Forces and ICU Nursing — assuming someone&apos;s depending on it right now.
             </p>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:justify-start">
               <a
@@ -40,16 +40,16 @@ export default function Home() {
             <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
               <p className="text-xs uppercase tracking-[0.3em] text-white/50">Now</p>
               <h2 className="mt-3 text-2xl font-semibold text-white">
-                Engineering Mission-Critical Systems
+                What I&apos;m Working On
               </h2>
               <p className="mt-3 text-white/70">
-                Currently based in North Carolina (US Citizen) and engineering AI-driven clinical interfaces and FHIR-compliant data systems. I specialize in **LLMOps and High-Availability AI Orchestration**, focusing on bringing &apos;zero-fail&apos; reliability to the HealthTech sector.
+                Based in North Carolina (US Citizen). I build AI-powered clinical tools and FHIR-compliant data systems — the kind that need to work at 3AM when a nurse is relying on them.
               </p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
               <p className="text-xs uppercase tracking-[0.3em] text-white/50">Recent</p>
               <p className="mt-3 text-white/70">
-                Engineered a high-availability AI Clinical Context Agent featuring a multi-model &apos;waterfall&apos; architecture (Gemini/Gemma). Achieved 100% uptime across 429/503 API error states by automating failover, maintaining sub-2-second latency for acute care synthesis. Then re-architected the entire system from Next.js to Ruby on Rails in a single weekend—benchmarking edge-latency against stateful persistence across identical clinical scenarios.
+                Built a clinical AI agent with a multi-model fallback chain (Gemini/Gemma) — if one model hits a 429 or 503, the next picks up automatically. Sub-2-second response times for acute care scenarios. Then I rebuilt the whole thing in Ruby on Rails over a weekend to compare a stateful architecture against the edge-optimized original.
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function Home() {
           <div className="reveal space-y-4 text-center md:text-left">
             <h2 className="text-3xl font-semibold text-white sm:text-4xl">Approach</h2>
             <p className="text-base leading-relaxed text-white/70 sm:text-lg">
-            I approach software as a unified system of code and human workflow. My background as a Special Forces Veteran and ICU Nurse allows me to architect full-stack solutions with a &apos;zero-fail&apos; mindset—prioritizing reliability and security in high-stakes environments. Today, I specialize in AI Agent Orchestration and HealthTech Interoperability, translating complex clinical requirements into resilient, production-grade code. I thrive at the intersection of cutting-edge technology and real-world impact, building tools that empower users and drive meaningful change.
+            I think about software the way I think about patient care — it needs to work for the person using it at 2AM under pressure, not just pass its test suite. Special Forces and ICU nursing trained me to assume things will go wrong and build accordingly. These days I focus on AI orchestration and healthcare interoperability — turning messy clinical requirements into code that holds up when it counts.
             </p>
           </div>
           <div className="reveal delay-1 rounded-3xl border border-white/10 bg-white/5 p-5 text-white/70 sm:p-6">

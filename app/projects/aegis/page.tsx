@@ -24,16 +24,17 @@ export default function AegisCaseStudy() {
           Aegis AI: Clinical Decision Support
         </h1>
         <p className="mx-auto max-w-3xl text-base text-white/70 sm:text-lg leading-relaxed">
-          A comparative engineering study benchmarking{" "}
+          Same clinical AI agent, two completely different architectures.
+          I built both —{" "}
           <span className="font-semibold text-[#f28c28]">
-            edge-latency orchestration
+            edge-optimized Next.js
           </span>{" "}
-          (Next.js) against{" "}
+          and{" "}
           <span className="font-semibold text-[#f28c28]">
-            stateful persistence
+            stateful Ruby on Rails
           </span>{" "}
-          (Ruby on Rails) for AI-driven clinical decision support in high-acuity
-          environments.
+          — and ran them against the same bedside scenarios to find out
+          what actually matters.
         </p>
         <a
           href="https://github.com/iroussos25/aegis-project"
@@ -52,7 +53,7 @@ export default function AegisCaseStudy() {
         </h2>
         <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8 space-y-4 text-white/70 leading-relaxed">
           <p>
-            Aegis began as a production-grade{" "}
+            Aegis started as a production{" "}
             <span className="font-semibold text-white">
               Next.js clinical AI agent
             </span>{" "}
@@ -62,10 +63,10 @@ export default function AegisCaseStudy() {
             RAG via Supabase pgvector, and live FHIR R4 data ingestion.
           </p>
           <p>
-            Then I asked a harder question:{" "}
+            That raised a question I couldn&apos;t let go of:{" "}
             <span className="italic text-[#ffb457]">
-              &ldquo;What happens when the priority shifts from speed-to-screen
-              to long-term data integrity?&rdquo;
+              &ldquo;What happens when speed-to-screen isn&apos;t the priority —
+              when you need long-term data integrity instead?&rdquo;
             </span>
           </p>
           <p>
@@ -73,23 +74,22 @@ export default function AegisCaseStudy() {
             <span className="font-semibold text-[#f28c28]">
               re-architected the entire system as a Ruby on Rails application
             </span>{" "}
-            — not a surface-level port, but a ground-up rethinking of how
-            clinical data flows through the stack. The Rails version replaces
+            — not a surface-level port, but a genuine rethink of how
+            clinical data should flow through the stack. The Rails version replaces
             edge functions with server-side service objects, swaps Supabase for a
             persistent PostgreSQL schema optimized for relational clinical
             mapping, and introduces background workers (ActiveJob/Sidekiq) for
             asynchronous FHIR synchronization and a persistent audit trail.
           </p>
           <p>
-            The result is a dual-platform benchmark that evaluates the real-world
-            trade-offs between these two architectural paradigms in a high-stakes
-            clinical context.{" "}
+            Now I have two fully deployed apps running the same clinical
+            scenarios — a direct comparison of how these architectures
+            behave under identical conditions.{" "}
             <span className="font-semibold text-[#f28c28]">
-              The full re-architecture — from concept to deployed Rails
-              application — was completed in a single weekend
+              From first commit to deployed Rails app, the re-architecture
+              took a single weekend
             </span>
-            , validating full-stack fluency across two fundamentally different
-            frameworks and deployment paradigms.
+            .
           </p>
         </div>
       </section>
@@ -400,7 +400,7 @@ export default function AegisCaseStudy() {
                       <span className="font-medium text-[#f28c28]">
                         {(row.nextMs / 1000).toFixed(1)}s
                       </span>
-                      <div className="mt-2 h-1.5 w-full max-w-[120px] rounded-full bg-white/10">
+                      <div className="mt-2 h-1.5 w-full max-w-30 rounded-full bg-white/10">
                         <div
                           className="h-full rounded-full bg-[#f28c28] transition-all duration-700"
                           style={{
@@ -413,7 +413,7 @@ export default function AegisCaseStudy() {
                       <span className="font-medium text-[#e67373]">
                         {(row.railsMs / 1000).toFixed(1)}s
                       </span>
-                      <div className="mt-2 h-1.5 w-full max-w-[120px] rounded-full bg-white/10">
+                      <div className="mt-2 h-1.5 w-full max-w-30 rounded-full bg-white/10">
                         <div
                           className="h-full rounded-full bg-[#cc0000] transition-all duration-700"
                           style={{
@@ -588,9 +588,10 @@ export default function AegisCaseStudy() {
               Clinical Reasoning Engine
             </h3>
             <p className="mt-3 text-sm text-white/70">
-              Codifying ICU/ER nursing logic into multi-tier model fallback
-              chains (Gemini 2.5 Flash → Flash Lite → Gemma 3). Achieved 100%
-              uptime across 429/503 API error states via automated failover.
+              ICU/ER nursing logic encoded into a multi-tier model fallback
+              chain (Gemini 2.5 Flash → Flash Lite → Gemma 3). If one model
+              hits a rate limit or goes down, the next picks up — no manual
+              intervention, no downtime.
             </p>
           </div>
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
@@ -598,10 +599,10 @@ export default function AegisCaseStudy() {
               FHIR Normalization
             </h3>
             <p className="mt-3 text-sm text-white/70">
-              Proprietary mapping layers that transform nested FHIR R4 JSON into
-              token-efficient, high-signal schemas for LLM consumption. Direct
-              integration with HAPI R4 servers for Patient, Observation, and
-              Condition resources.
+              Custom mapping layers that flatten deeply nested FHIR R4 JSON
+              into clean, token-efficient schemas that LLMs can actually reason
+              over. Connects directly to HAPI R4 servers for Patient,
+              Observation, and Condition resources.
             </p>
           </div>
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
@@ -609,9 +610,9 @@ export default function AegisCaseStudy() {
               Explainable AI (XAI)
             </h3>
             <p className="mt-3 text-sm text-white/70">
-              Direct source attribution logic mapping every AI claim back to
-              specific ResourceID points in the patient record. Ensures full
-              clinical auditability and transparency.
+              Every AI claim maps back to a specific resource in the patient
+              record. If the AI says something, you can trace exactly where it
+              got that — non-negotiable in clinical software.
             </p>
           </div>
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
@@ -619,9 +620,9 @@ export default function AegisCaseStudy() {
               System Resilience
             </h3>
             <p className="mt-3 text-sm text-white/70">
-              Multi-tier rate limiting, strict schema validation across all API
-              boundaries, and standardized clinical error reporting with
-              structured JSON logging for full system traceability.
+              Layered rate limiting, schema validation on every API boundary,
+              and structured JSON error logging. When something breaks, the
+              logs tell you exactly where and why.
             </p>
           </div>
         </div>

@@ -42,13 +42,12 @@ export default function FeaturedProjectCard() {
           </div>
 
           <p className="text-base text-white/70 leading-relaxed">
-            A comparative engineering study. I took my production Next.js
-            clinical AI agent and{" "}
+            I took my production Next.js clinical AI agent and{" "}
             <span className="font-semibold text-[#f28c28]">
               re-architected it as a full Ruby on Rails application
             </span>{" "}
-            — benchmarking edge-latency orchestration against stateful
-            persistence in a high-acuity clinical context.
+            — then ran identical clinical scenarios through both to see
+            which architecture holds up better at the bedside.
           </p>
 
           <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.2em]">
