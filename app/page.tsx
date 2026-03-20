@@ -1,6 +1,7 @@
 "use client";
 
 import ProjectCard from "./components/ProjectCard";
+import FeaturedProjectCard from "./components/FeaturedProjectCard";
 import TechStack from "./components/TechStack";
 import { projects } from "./data/projects";
 import { useContactModal } from "./context/ContactModalContext";
@@ -48,7 +49,7 @@ export default function Home() {
             <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
               <p className="text-xs uppercase tracking-[0.3em] text-white/50">Recent</p>
               <p className="mt-3 text-white/70">
-                Engineered a high-availability AI Clinical Context Agent featuring a multi-model &apos;waterfall&apos; architecture (Gemini/Gemma). Achieved 100% uptime across 429/503 API error states by automating failover, maintaining sub-2-second latency for acute care synthesis. Integrated RAG via Supabase pgvector and live FHIR R4 data ingestion for production-grade decision support.
+                Engineered a high-availability AI Clinical Context Agent featuring a multi-model &apos;waterfall&apos; architecture (Gemini/Gemma). Achieved 100% uptime across 429/503 API error states by automating failover, maintaining sub-2-second latency for acute care synthesis. Then re-architected the entire system from Next.js to Ruby on Rails in a single weekend—benchmarking edge-latency against stateful persistence across identical clinical scenarios.
               </p>
             </div>
           </div>
@@ -67,7 +68,7 @@ export default function Home() {
             </p>
             <ul className="mt-4 grid gap-3 text-base leading-relaxed sm:text-lg">
               <li className="text-[#ffb457]">⚡ Full-Stack & AI Engineering</li>
-              <li>Next.js 15, TypeScript, Python, SQL </li>
+              <li>Next.js 15, TypeScript, Ruby on Rails, Python, SQL </li>
               <li><span className="font-semibold text-[#f28c28]">LLMOps: </span> Multi-model orchestration & automated fallback systems</li>
               <li><span className="font-semibold text-[#f28c28]">RAG: </span> Vector database architecture (Supabase pgvector) and semantic search</li>
               <li>Three.js, WebGL & interactive experiences</li>
@@ -75,6 +76,7 @@ export default function Home() {
               
               <li className="text-[#ffb457] mt-2">🎯 System Architecture and Implementation</li>
               <li><span className="font-semibold text-[#f28c28]">Resilient Infrastructure: </span> 429/503 error handling & graceful degradation</li>
+              <li><span className="font-semibold text-[#f28c28]">Cross-Framework Fluency: </span> Re-architected a production Next.js agent to Ruby on Rails in a weekend</li>
               <li>Product vision, roadmapping & UX strategy</li>
               <li>Go-to-market planning & execution</li>
               <li>Stakeholder management & cross-functional leadership</li>
@@ -101,6 +103,8 @@ export default function Home() {
               2023 - 2026
             </p>
           </div>
+          <FeaturedProjectCard />
+
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project, index) => (
               <ProjectCard key={project.url} project={project} index={index} />

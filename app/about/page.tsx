@@ -35,7 +35,7 @@ export default function AboutPage() {
               My background is a bit unconventional: I spent years in <span className="font-semibold text-[#f28c28]">ICU Nursing</span> and the <span className="font-semibold text-[#f28c28]">Special Forces.</span> That experience taught me how to stay objective when things get chaotic and how to build systems that people can actually rely on when it matters most.
                </p>
             <p>
-              These days, I’m focused on <span className="font-semibold text-[#f28c28]">AI Orchestration and HealthTech interoperability.</span>  I like building tools that feel &apos;invisible&apos;—software that just works so humans can focus on the task at hand.
+              These days, I&apos;m focused on <span className="font-semibold text-[#f28c28]">AI Orchestration and HealthTech interoperability.</span>  I build across frameworks and paradigms—recently re-architecting a full production Next.js clinical AI agent into Ruby on Rails in a single weekend. I like building tools that feel &apos;invisible&apos;—software that just works so humans can focus on the task at hand.
             </p>
             <p>
               When I&apos;m away from my desk, I&apos;m usually outdoors or attempting to play the guitar. I&apos;ve reached a &apos;production-grade&apos; level in TypeScript, but my acoustic skills are still very much <span className="font-semibold text-[#f28c28]">in beta.</span>  (Expect missed chords and high enthusiasm.)
@@ -54,7 +54,7 @@ export default function AboutPage() {
           <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
             <h2 className="text-xl font-semibold text-white">Core Toolkit</h2>
              <ul className="mt-4 space-y-3 text-white/70">
-              <li><span className="font-semibold text-[#f28c28]">The Stack: </span>React, Next.js, TypeScript, Node.js, PostgreSQL.</li>
+              <li><span className="font-semibold text-[#f28c28]">The Stack: </span>React, Next.js, TypeScript, Ruby on Rails, Node.js, PostgreSQL.</li>
               <li><span className="font-semibold text-[#f28c28]">Specializations: </span>AI Agent Orchestration (LangGraph), MediaPipe, HL7 FHIR R4.</li>
               <li><span className="font-semibold text-[#f28c28]">Infrastructure: </span>AWS (EC2/S3), CI/CD, HIPAA-compliant architecture.</li>
             </ul>
