@@ -22,7 +22,7 @@ export const projects: Project[] = [
     detailedDescription: "AI-powered capture interface using MediaPipe for real-time 3D biometric landmark detection. The system checks image quality before accepting data — if the capture isn't clean enough, it gets rejected rather than feeding noise to the downstream model.",
     tags: ["MediaPipe", "Computer Vision", "TypeScript", "AI"],
     url: "https://skinstric-project-mu.vercel.app/",
-    image: "/Skinstric.png",
+    image: "/Skinstric1.png",
   },
   {
     title: "Summarist: AI SaaS Architecture",
