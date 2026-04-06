@@ -53,7 +53,7 @@ export const projects: Project[] = [
     description: "",
     detailedDescription: "Marketplace built with Next.js, connected to blockchain API endpoints for ownership verification. Focus was on getting the state management right so the UI stays snappy even when browsing large asset collections.",
     tags: ["Next.js", "Web3 API", "State Management"],
-    url: "https://yiannis-internship.vercel.app/",
+    url: "https://yiannis-ultraverse.vercel.app/",
     image: "/Ultraverse.png",
   },
   {
