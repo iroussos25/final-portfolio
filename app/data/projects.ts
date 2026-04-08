@@ -17,6 +17,14 @@ export const projects: Project[] = [
     image: "/icu-monitor.png",
   },
   {
+    title: "PostHog FHIR Event Bridge",
+    description: "", 
+    detailedDescription: "TypeScript/Node.js bridge that fetches HL7 FHIR R4 Observation resources from a HAPI test server and forwards them to PostHog as structured analytics events with LOINC-coded schemas. Includes dry-run mode for validation before live dispatch - built because clinical data and product analytics should be able to talk to each other.",
+    tags: ["HL7 FHIR", "TypeScript", "Node.js", "PostHog", "LOINC", "Healthcare"],
+    url: "https://github.com/iroussos25/fhir-event-bridge",
+    image: "/fhir_bridge_values.png",
+  },
+  {
     title: "Skinstric: AI Biometric Interface",
     description: "",
     detailedDescription: "AI-powered capture interface using MediaPipe for real-time 3D biometric landmark detection. The system checks image quality before accepting data — if the capture isn't clean enough, it gets rejected rather than feeding noise to the downstream model.",
