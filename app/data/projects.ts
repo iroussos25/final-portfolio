@@ -9,6 +9,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Anima Triage: Clinical Intake & Dashboard",
+    description: "",
+    detailedDescription: "Patient triage intake and clinician dashboard built on Angular 18 standalone components, AWS Lambda (TypeScript), and DynamoDB. Submissions are stored as HL7 FHIR R4 Bundles with SNOMED CT and LOINC-coded fields — not flat JSON — so data is immediately consumable by any EHR that speaks HL7 without a transformation layer. Full backend deployed via AWS SAM as IaC; 25 unit tests covering form validation, severity colour mapping, and status advancement logic.",
+    tags: ["Angular", "AWS Lambda", "DynamoDB", "HL7 FHIR", "TypeScript", "Healthcare"],
+    url: "https://anima-triage-demo.vercel.app/",
+    image: "/Anima.png",
+  },
+  {
     title: "FHIR Pulse: Clinical Interoperability",
     description: "", 
     detailedDescription: "An interoperability dashboard that pulls HL7 FHIR R4 data through a Node.js middleware layer and visualizes patient vitals in real time. Custom schema validation and HIPAA-compliant data handling — built for clinical environments where stale or malformed data isn't an option.",
