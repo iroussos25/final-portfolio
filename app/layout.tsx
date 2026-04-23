@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Giannis Roussos | Product Designer & Full-Stack Developer",
-  description: "Front-end developer and digital designer crafting bold, human experiences for modern teams.",
+  description: "Full-stack software engineer specializing in TypeScript, React, and production AI systems.",
   icons: {
     icon: "/transparent-logo.svg",
   },
