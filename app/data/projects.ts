@@ -33,6 +33,14 @@ export const projects: Project[] = [
     image: "/fhir_bridge_values.png",
   },
   {
+    title: "Learnflows: Rails 8 Growth Funnel Demo",
+    description: "", 
+    detailedDescription: "Visitor-facing edtech landing page built in a single session as Growth team interview prep. Rails 8 with server-side A/B test randomly assigning one of two CTA variants per visit, a three-subject course catalog with detail pages, and a signup conversion funnel using form_with POST and redirect. HAML and ERB templates side by side. Deployed to Fly.io. Built to demonstrate the full Rails request cycle and the variant-assignment pattern a Growth engineer would ship on a real funnel.",
+    tags: ["Ruby on Rails 8", "HAML", "ERB", "A/B Testing", "Conversion Funnel", "Fly.io"],
+    url: "https://learnflows.fly.dev/",
+    image: "/learnflows.png",
+  },
+  {
     title: "Skinstric: AI Biometric Interface",
     description: "",
     detailedDescription: "AI-powered capture interface using MediaPipe for real-time 3D biometric landmark detection. The system checks image quality before accepting data — if the capture isn't clean enough, it gets rejected rather than feeding noise to the downstream model.",
