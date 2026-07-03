@@ -28,7 +28,7 @@ export default function AboutPage() {
 
           <div className="space-y-4 text-white/70">
             <p>
-              I went from Code Blue to code base. I&apos;m a <span className="font-semibold text-[#f28c28]">Full-Stack Software Engineer</span> who
+              I went from pushing meds to pushing code. I&apos;m a <span className="font-semibold text-[#f28c28]">Full-Stack Software Engineer</span> who
               likes building tools that actually help people get things done — and I like untangling complex problems, whether that&apos;s a clinical data pipeline or a messy repo.
             </p>
             <p>

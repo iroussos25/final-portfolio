@@ -40,16 +40,25 @@ export default function Home() {
             <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
               <p className="text-xs uppercase tracking-[0.3em] text-white/50">Now</p>
               <h2 className="mt-3 text-2xl font-semibold text-white">
+                Frontier Model Evaluation
+              </h2>
+              <p className="mt-3 text-white/70">
+                I evaluate and train frontier models for three of the industry&apos;s leading AI labs (via Alignerr, Micro1, and Mercor) — designing long-horizon evaluation tasks, grading outputs across technical and content-quality axes, and stress-testing pre-release coding models in agentic environments.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
+              <p className="text-xs uppercase tracking-[0.3em] text-white/50">Building</p>
+              <h2 className="mt-3 text-2xl font-semibold text-white">
                 What I&apos;m Working On
               </h2>
               <p className="mt-3 text-white/70">
-                Based in North Carolina (US Citizen). I build AI-powered clinical tools and FHIR-compliant data systems — the kind that need to work at 3AM when a nurse is relying on them.
+                Based in North Carolina (US Citizen). I build AI-powered systems for high-stakes environments — resilient multi-model orchestration, graceful degradation under load, and healthcare interoperability (FHIR/HL7). The kind of software that has to work at 3AM when someone&apos;s depending on it.
               </p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
               <p className="text-xs uppercase tracking-[0.3em] text-white/50">Recent</p>
               <p className="mt-3 text-white/70">
-                Built a clinical AI agent with a multi-model fallback chain (Gemini/Gemma) — if one model hits a 429 or 503, the next picks up automatically. Sub-2-second response times for acute care scenarios. Then I rebuilt the whole thing in Ruby on Rails over a weekend to compare a stateful architecture against the edge-optimized original.
+                Built an AI agent with a multi-model fallback chain (Gemini/Gemma) — if one model hits a 429 or 503, the next picks up automatically, holding sub-2-second responses under load. Then I rebuilt the whole thing in Ruby on Rails over a weekend to compare a stateful architecture against the edge-optimized original. Its proving ground: acute clinical care, where slow or wrong isn&apos;t an option.
               </p>
             </div>
           </div>
@@ -59,7 +68,7 @@ export default function Home() {
           <div className="reveal space-y-4 text-center md:text-left">
             <h2 className="text-3xl font-semibold text-white sm:text-4xl">Approach</h2>
             <p className="text-base leading-relaxed text-white/70 sm:text-lg">
-            I think about software the way I think about patient care — it needs to work for the person using it at 2AM under pressure, not just pass its test suite. Special Forces and ICU nursing trained me to assume things will go wrong and build accordingly. These days I focus on AI orchestration and healthcare interoperability — turning messy clinical requirements into code that holds up when it counts.
+            I build software for the person using it under pressure — not just to pass a test suite. Special Forces and ICU nursing trained me to assume things will go wrong and build accordingly. My focus is AI orchestration and resilient systems: multi-model fallbacks, graceful degradation, and interoperability work — like FHIR/HL7 in healthcare — that turns messy real-world requirements into code that holds up when it counts.
             </p>
           </div>
           <div className="reveal delay-1 rounded-3xl border border-white/10 bg-white/5 p-5 text-white/70 sm:p-6">

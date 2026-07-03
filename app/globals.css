@@ -250,6 +250,65 @@ a {
   }
 }
 
+/* ECG "triage-to-code" motif (rescue landing pages) */
+.ecg-line {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: ecg-draw 3.4s ease forwards;
+}
+
+@keyframes ecg-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.ecg-code {
+  opacity: 0;
+  animation: ecg-code-in 0.6s ease forwards;
+  animation-delay: 3s;
+}
+
+@keyframes ecg-code-in {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.ecg-cursor {
+  opacity: 0;
+  animation: ecg-blink 1s steps(2, start) infinite;
+  animation-delay: 3.2s;
+}
+
+@keyframes ecg-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecg-line {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .ecg-code,
+  .ecg-cursor {
+    opacity: 1;
+    animation: none;
+  }
+}
+
 /* Modal Styles */
 .modal-half-left {
   background: rgba(6, 11, 26, 0.98);

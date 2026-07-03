@@ -2,11 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 import { useContactModal } from "../context/ContactModalContext";
 
 export default function Header() {
   const { openModal } = useContactModal();
+  // Greek business page gets Greek chrome; everything else stays English.
+  const isGreek = usePathname() === "/rescue-gr";
+  const t = isGreek
+    ? { name: "Γιάννης Ρούσσος", projects: "Έργα", about: "Σχετικά", contact: "ΕΠΙΚΟΙΝΩΝΙΑ" }
+    : { name: "Giannis Roussos", projects: "Projects", about: "About", contact: "CONTACT" };
   return (
     <header className="theme-header sticky top-0 z-10 border-b backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-5">
@@ -20,20 +26,20 @@ export default function Header() {
               className="logo-fill h-10 w-10 sm:h-12 sm:w-12"
             />
           </span>
-          <span className="hidden min-[560px]:inline">Giannis Roussos</span>
+          <span className="hidden min-[560px]:inline">{t.name}</span>
         </Link>
         <nav className="theme-text flex shrink-0 items-center gap-3 text-[11px] uppercase tracking-[0.12em] min-[420px]:gap-4 min-[420px]:text-xs min-[420px]:tracking-[0.18em] sm:gap-6 sm:text-sm sm:tracking-[0.25em]">
           <Link href="/#projects" className="theme-text-bright transition hover:opacity-100">
-            Projects
+            {t.projects}
           </Link>
           <Link href="/about" className="theme-text-bright transition hover:opacity-100">
-            About
+            {t.about}
           </Link>
           <button
             onClick={openModal}
             className="theme-text-bright transition hover:opacity-100 cursor-pointer"
           >
-            CONTACT
+            {t.contact}
           </button>
           <ThemeToggle />
         </nav>

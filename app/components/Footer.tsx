@@ -1,17 +1,31 @@
 "use client";
 
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useContactModal } from '../context/ContactModalContext';
 
 export default function Footer() {
   const { openModal } = useContactModal();
+  // Greek business page gets Greek chrome; everything else stays English.
+  const isGreek = usePathname() === '/rescue-gr';
+  const t = isGreek
+    ? {
+        tagline: 'Ας φτιάξουμε κάτι ξεχωριστό.',
+        subtitle: 'Διαθέσιμος για freelance, συνεργασίες και ευκαιρίες εργασίας.',
+        resume: 'Βιογραφικό',
+      }
+    : {
+        tagline: "Let's build something bold.",
+        subtitle: 'Open for freelance, collaborations, and employment opportunities.',
+        resume: 'Resume',
+      };
 
   return (
     <footer id="contact" className="theme-footer border-t">
       <div className="theme-text mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-14 text-center text-sm lg:flex-row lg:items-center lg:justify-between lg:text-left">
         <div className="space-y-2 lg:max-w-xs">
-          <p className="theme-text-bright text-base font-semibold">Let&apos;s build something bold.</p>
-          <p>Open for freelance, collaborations, and employment opportunities.</p>
+          <p className="theme-text-bright text-base font-semibold">{t.tagline}</p>
+          <p>{t.subtitle}</p>
         </div>
         <button 
           onClick={openModal}
@@ -39,8 +53,8 @@ export default function Footer() {
             LinkedIn
           </a>
           <span className="opacity-30">|</span>
-          <a className="theme-text-bright transition hover:opacity-100" href="/tech-resume9.pdf" target="_blank" rel="noopener noreferrer">
-            Resume
+          <a className="theme-text-bright transition hover:opacity-100" href="/tech-resume10.pdf" target="_blank" rel="noopener noreferrer">
+            {t.resume}
           </a>
         </div>
       </div>
