@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     "freelance web developer",
     "flat fee web development",
     "48 hour website fix",
+    "website maintenance",
+    "website maintenance plan",
+    "monthly website support",
   ],
   alternates: {
     canonical: "/rescue",
@@ -89,6 +92,20 @@ const serviceJsonLd = {
       price: "1800",
       priceCurrency: "USD",
       description: "Add a resilient AI layer — chat, content, or workflow automation.",
+    },
+    {
+      "@type": "Offer",
+      name: "Keep It Working — Website Maintenance",
+      priceCurrency: "USD",
+      description:
+        "Ongoing maintenance: updates, daily backups, security and uptime monitoring, two content edits a month, and a monthly report.",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "150",
+        priceCurrency: "USD",
+        unitText: "MONTH",
+        billingIncrement: 1,
+      },
     },
   ],
 };

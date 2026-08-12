@@ -10,6 +10,7 @@ const packages = [
   {
     name: "48ωρη Διάσωση",
     price: "€490",
+    was: "€750",
     intro: "Ιδρυτική τιμή — μόνο για τους 3 πρώτους πελάτες",
     tagline: "Η ιστοσελίδα σου είναι χαλασμένη, αργή ή σε φέρνει σε δύσκολη θέση. Κάνω διαλογή, διορθώνω ό,τι είναι κρίσιμο και στη δίνω πίσω να δουλεύει — σε 48 ώρες.",
     features: [
@@ -24,6 +25,7 @@ const packages = [
   {
     name: "Ανακατασκευή",
     price: "€1.200",
+    was: null,
     intro: null,
     tagline: "Πέρα από απλή επιδιόρθωση; Την ξαναχτίζω καθαρή, γρήγορη και σύγχρονη — ίδιο περιεχόμενο, νέες βάσεις που δεν θα χρειαστεί να ξανασώσεις.",
     features: [
@@ -38,8 +40,9 @@ const packages = [
   {
     name: "Αναβάθμιση AI",
     price: "από €900",
+    was: null,
     intro: null,
-    tagline: "Πρόσθεσε ένα επίπεδο AI που πραγματικά δουλεύει — chat, περιεχόμενο ή αυτοματισμούς, φτιαγμένο να αντέχει στην πίεση.",
+    tagline: "Πρόσθεσε AI που πραγματικά δουλεύει — chat, περιεχόμενο ή αυτοματισμούς, φτιαγμένο να αντέχει στην πίεση.",
     features: [
       "Ενσωμάτωση AI chat / βοηθού",
       "Δημιουργία περιεχομένου & κειμένων",
@@ -51,6 +54,32 @@ const packages = [
   },
 ];
 
+// Recurring add-on, not a fourth package. Priced against the Greek market's HOURLY
+// support rate (€30-60/hr), not against its €20/mo maintenance plans, because those
+// plans include zero content edits.
+const maintenance = {
+  name: "Συντήρηση & Υποστήριξη",
+  price: "€50",
+  cadence: "/μήνα",
+  tagline:
+    "Οι ιστοσελίδες σπάνια χαλάνε μονομιάς. Σαπίζουν. Ένα plugin ενημερώνεται, μια φόρμα σταματάει να στέλνει, ένα πιστοποιητικό λήγει. Κανείς δεν το παίρνει είδηση μέχρι να τηλεφωνήσει πελάτης ότι το site δεν δουλεύει.",
+  features: [
+    "Ενημερώσεις συστήματος, plugins & εξαρτήσεων",
+    "Καθημερινά backups εκτός server",
+    "Παρακολούθηση ασφάλειας & έλεγχος για malware",
+    "Έλεγχος διαθεσιμότητας 24/7. Το μαθαίνω πριν από σένα.",
+    "Δύο αλλαγές περιεχομένου τον μήνα (ωράρια, προσωπικό, τιμές, φωτογραφίες)",
+    "Μηνιαία αναφορά μίας σελίδας",
+  ],
+  compare:
+    "Τα βασικά πακέτα συντήρησης στην αγορά ξεκινούν από €20 τον μήνα και δεν περιλαμβάνουν καμία αλλαγή περιεχομένου. Οι αλλαγές χρεώνονται χωριστά, €30 έως €60 την ώρα. Οι δύο αλλαγές που περιλαμβάνονται εδώ κοστίζουν €60 με €120 αλλού.",
+  terms: [
+    "Απάντηση σε μία εργάσιμη. Αν το site είναι εκτός λειτουργίας, αυθημερόν.",
+    "Νέες σελίδες, ανασχεδιασμοί και νέες λειτουργίες κοστολογούνται χωριστά, σε τιμή πελάτη συντήρησης.",
+    "Χωρίς συμβόλαιο. Ακυρώνεις όποτε θες.",
+  ],
+};
+
 const steps = [
   {
     n: "01",
@@ -60,7 +89,7 @@ const steps = [
   {
     n: "02",
     title: "Προκαταβολή 50% — διορθώνω σε 48 ώρες",
-    body: "Εγκρίνεις μια σταθερή τιμή και πληρώνεις τα μισά προκαταβολικά. Μπαίνω με το κεφάλι κάτω και το διορθώνω μέσα σε 48 ώρες. Χωρίς παρεκκλίσεις, χωρίς κρυφές χρεώσεις.",
+    body: "Εγκρίνεις μια σταθερή τιμή και πληρώνεις τα μισά προκαταβολικά. Μπαίνω και το διορθώνω μέσα σε 48 ώρες. Χωρίς παρεκκλίσεις, χωρίς κρυφές χρεώσεις.",
   },
   {
     n: "03",
@@ -113,6 +142,12 @@ export default function RescueGrContent() {
           <div className="reveal text-center">
             <h2 className="text-3xl font-semibold sm:text-4xl">Τρεις τρόποι να ξεκινήσεις</h2>
             <p className="mt-3 text-white/60">Μία σταθερή τιμή. Χωρίς χρέωση με την ώρα. Χωρίς εκπλήξεις.</p>
+            {/* Reframes the flat fee against the hourly rate buyers already have in mind,
+                so the number reads as a cap rather than as a bigger bill. */}
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/50">
+              Οι περισσότεροι χρεώνουν €30 με €60 την ώρα. Αν η δουλειά πάρει 14 ώρες αντί για 10, πληρώνεις 14.
+              Εδώ η τιμή είναι μία και δεν αλλάζει, είτε μου πάρει 6 ώρες είτε 20. Το ρίσκο του χρόνου το κρατάω εγώ.
+            </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {packages.map((pkg, i) => (
@@ -124,19 +159,29 @@ export default function RescueGrContent() {
                   borderColor: pkg.featured ? "rgba(47,181,163,0.5)" : "rgba(255,255,255,0.1)",
                 }}
               >
-                {pkg.featured && (
-                  <span
-                    className="mb-4 inline-block w-fit rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#0E1B2A]"
-                    style={{ background: TEAL }}
-                  >
-                    Πιο Δημοφιλές
-                  </span>
-                )}
+                {/* Badge slot renders in every card so headings stay aligned across the
+                    row. Non-featured cards get an invisible copy — same markup, so the
+                    reserved height can't drift if the badge's styling changes. Hidden
+                    below md, where the cards stack and alignment doesn't apply. */}
+                <span
+                  aria-hidden={!pkg.featured}
+                  className={`mb-4 w-fit rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#0E1B2A] ${
+                    pkg.featured ? "inline-block" : "hidden md:inline-block md:invisible"
+                  }`}
+                  style={{ background: pkg.featured ? TEAL : "transparent" }}
+                >
+                  Πιο Δημοφιλές
+                </span>
                 <h3 className="text-xl font-semibold text-white">{pkg.name}</h3>
-                <div className="mt-3 flex items-baseline gap-2">
+                <div className="mt-3 flex flex-wrap items-baseline gap-2">
                   <span className="text-4xl font-semibold" style={{ color: TEAL }}>
                     {pkg.price}
                   </span>
+                  {/* Regular price shown struck through so the founding price reads as a
+                      discount instead of a list price. */}
+                  {pkg.was && (
+                    <span className="text-xl font-medium text-white/40 line-through">{pkg.was}</span>
+                  )}
                 </div>
                 {pkg.intro && (
                   <p className="mt-2 text-xs font-medium" style={{ color: TEAL }}>
@@ -167,6 +212,71 @@ export default function RescueGrContent() {
                 </button>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 2b. RESCUE vs NEW SITE — kills the €699 template-site anchor before the
+            visitor makes that comparison silently and walks. */}
+        <section className="reveal -mt-10 rounded-3xl border border-white/10 bg-white/4 p-6 sm:p-8">
+          <h3 className="text-lg font-semibold text-white">Γιατί διάσωση και όχι καινούρια ιστοσελίδα;</h3>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/70">
+            Μια καινούρια ιστοσελίδα από πρότυπο ξεκινά γύρω στα €699. Μοιάζει παρόμοιο κόστος. Δεν είναι το ίδιο
+            πράγμα. Η διάσωση κρατάει το περιεχόμενό σου, το ιστορικό SEO και τη θέση σου στο Google. Μια καινούρια
+            ιστοσελίδα τα μηδενίζει και ξεκινάς από την αρχή.
+          </p>
+          <p className="mt-4 text-xs text-white/40">Οι τιμές δεν περιλαμβάνουν ΦΠΑ.</p>
+        </section>
+
+        {/* 2c. MAINTENANCE — recurring add-on, deliberately outside the packages grid */}
+        <section
+          className="reveal rounded-3xl border p-6 sm:p-8 md:p-10"
+          style={{ borderColor: "rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.04)" }}
+        >
+          <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] md:gap-12">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.3em]" style={{ color: TEAL }}>
+                Μετά την επιδιόρθωση
+              </p>
+              <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">{maintenance.name}</h2>
+              <div className="mt-3 flex items-baseline gap-1">
+                <span className="text-4xl font-semibold" style={{ color: TEAL }}>
+                  {maintenance.price}
+                </span>
+                <span className="text-lg text-white/60">{maintenance.cadence}</span>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-white/70">{maintenance.tagline}</p>
+              <button
+                onClick={openCalendly}
+                className="mt-8 rounded-full border px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+                style={{ background: "transparent", borderColor: TEAL }}
+              >
+                Πρροσθήκη
+              </button>
+            </div>
+
+            <div>
+              <ul className="space-y-3 text-sm text-white/80">
+                {maintenance.features.map((f) => (
+                  <li key={f} className="flex items-start gap-3">
+                    <span className="mt-0.5 shrink-0" style={{ color: TEAL }} aria-hidden="true">
+                      ✓
+                    </span>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <p
+                className="mt-6 rounded-2xl border p-4 text-xs leading-relaxed text-white/70"
+                style={{ borderColor: "rgba(47,181,163,0.35)", background: "rgba(47,181,163,0.06)" }}
+              >
+                {maintenance.compare}
+              </p>
+              <ul className="mt-5 space-y-2 border-t border-white/10 pt-5 text-xs leading-relaxed text-white/50">
+                {maintenance.terms.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -203,11 +313,11 @@ export default function RescueGrContent() {
             Ιδρυτικοί Πελάτες
           </p>
           <h2 className="mx-auto mt-4 max-w-2xl text-2xl font-semibold text-white sm:text-3xl">
-            Οι πρώτοι 3 πελάτες κλείνουν τη Διάσωση σε <span style={{ color: TEAL }}>ειδική ιδρυτική τιμή</span>.
+            Οι πρώτοι 3 πελάτες κλείνουν τη 48ωρη Διάσωση στα <span style={{ color: TEAL }}>€490</span> αντί για €750.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/70">
             Με αντάλλαγμα μια ειλικρινή μαρτυρία. Χτίζω το πορτφόλιό μου· εσύ παίρνεις μια διορθωμένη ιστοσελίδα στην
-            ιδρυτική τιμή. Μόλις κλείσουν οι 3 θέσεις, η προσφορά τελειώνει.
+            ιδρυτική τιμή. Μόλις κλείσουν οι 3 θέσεις, η τιμή πάει στα €750.
           </p>
           <button
             onClick={openCalendly}

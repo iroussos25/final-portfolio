@@ -51,6 +51,28 @@ const packages = [
   },
 ];
 
+// Recurring add-on, not a fourth package. Attaches to whichever project the client buys.
+const maintenance = {
+  name: "Keep It Working",
+  price: "$150",
+  cadence: "/month",
+  tagline:
+    "Sites rarely break all at once. They rot. A dependency updates, a form stops sending, a certificate lapses. Nobody notices until a customer calls to say your site is down — or doesn't call at all.",
+  features: [
+    "Software, dependency & plugin updates",
+    "Daily off-site backups",
+    "Security monitoring & malware scanning",
+    "Uptime monitoring — I get the alert before you do",
+    "Two content edits a month (hours, staff, prices, photos)",
+    "One-page monthly report of what changed",
+  ],
+  terms: [
+    "One business day response. Site down is same day.",
+    "New pages, redesigns, and new features are quoted separately, at a maintenance-client rate.",
+    "No contract. Cancel any time.",
+  ],
+};
+
 const steps = [
   {
     n: "01",
@@ -124,14 +146,19 @@ export default function RescueContent() {
                   borderColor: pkg.featured ? "rgba(47,181,163,0.5)" : "rgba(255,255,255,0.1)",
                 }}
               >
-                {pkg.featured && (
-                  <span
-                    className="mb-4 inline-block w-fit rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#0E1B2A]"
-                    style={{ background: TEAL }}
-                  >
-                    Most Popular
-                  </span>
-                )}
+                {/* Badge slot renders in every card so headings stay aligned across the
+                    row. Non-featured cards get an invisible copy — same markup, so the
+                    reserved height can't drift if the badge's styling changes. Hidden
+                    below md, where the cards stack and alignment doesn't apply. */}
+                <span
+                  aria-hidden={!pkg.featured}
+                  className={`mb-4 w-fit rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#0E1B2A] ${
+                    pkg.featured ? "inline-block" : "hidden md:inline-block md:invisible"
+                  }`}
+                  style={{ background: pkg.featured ? TEAL : "transparent" }}
+                >
+                  Most Popular
+                </span>
                 <h3 className="text-xl font-semibold text-white">{pkg.name}</h3>
                 <div className="mt-3 flex items-baseline gap-2">
                   <span className="text-4xl font-semibold" style={{ color: TEAL }}>
@@ -167,6 +194,53 @@ export default function RescueContent() {
                 </button>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 2b. MAINTENANCE — recurring add-on, deliberately outside the packages grid */}
+        <section
+          className="reveal rounded-3xl border p-6 sm:p-8 md:p-10"
+          style={{ borderColor: "rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.04)" }}
+        >
+          <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] md:gap-12">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.3em]" style={{ color: TEAL }}>
+                After the fix
+              </p>
+              <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">{maintenance.name}</h2>
+              <div className="mt-3 flex items-baseline gap-1">
+                <span className="text-4xl font-semibold" style={{ color: TEAL }}>
+                  {maintenance.price}
+                </span>
+                <span className="text-lg text-white/60">{maintenance.cadence}</span>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-white/70">{maintenance.tagline}</p>
+              <button
+                onClick={openCalendly}
+                className="mt-8 rounded-full border px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+                style={{ background: "transparent", borderColor: TEAL }}
+              >
+                Add it to your project
+              </button>
+            </div>
+
+            <div>
+              <ul className="space-y-3 text-sm text-white/80">
+                {maintenance.features.map((f) => (
+                  <li key={f} className="flex items-start gap-3">
+                    <span className="mt-0.5 shrink-0" style={{ color: TEAL }} aria-hidden="true">
+                      ✓
+                    </span>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <ul className="mt-6 space-y-2 border-t border-white/10 pt-6 text-xs leading-relaxed text-white/50">
+                {maintenance.terms.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 

@@ -6,7 +6,7 @@ import { NextResponse, type NextRequest } from "next/server";
 // Any other host (localhost, *.vercel.app previews) stays unrestricted so both
 // halves of the site remain viewable in development and preview.
 
-const BUSINESS_PREFIXES = ["/rescue", "/rescue-gr"];
+const BUSINESS_PREFIXES = ["/rescue", "/rescue-gr", "/clinics"];
 
 function isBusinessPath(pathname: string): boolean {
   return BUSINESS_PREFIXES.some(

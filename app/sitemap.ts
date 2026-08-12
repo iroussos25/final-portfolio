@@ -15,5 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Business (.com)
     { url: `${COM}/rescue`, lastModified: LAST_MODIFIED, changeFrequency: "weekly", priority: 0.9 },
     { url: `${COM}/rescue-gr`, lastModified: LAST_MODIFIED, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${COM}/clinics`, lastModified: LAST_MODIFIED, changeFrequency: "weekly", priority: 0.9 },
   ];
 }
